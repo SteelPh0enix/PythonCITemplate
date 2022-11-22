@@ -34,6 +34,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: project-page
+          path: project-page
       - name: Set up Python 3.10
         uses: actions/setup-python@v4
         with:
@@ -47,6 +48,8 @@ jobs:
         run: |
           poetry run coverage run -m pytest
           poetry run coverage html -d coverage_report
+      - name: Copy project page content to root
+        run: cp -r project-page/* .
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
