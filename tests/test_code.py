@@ -6,4 +6,4 @@ def test_math():
 
 
 def test_different_math():
-    assert do_some_different_math(2) == 5
+    assert do_some_different_math(2) == 4
