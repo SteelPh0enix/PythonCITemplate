@@ -28,8 +28,12 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout project
         uses: actions/checkout@v3
+      - name: Checkout project site
+        uses: actions/checkout@v3
+        with:
+          ref: project-page
       - name: Set up Python 3.10
         uses: actions/setup-python@v4
         with:
