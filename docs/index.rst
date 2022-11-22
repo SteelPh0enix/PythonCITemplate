@@ -10,7 +10,9 @@ Welcome to Example Python project's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+See `coverage report`_
 
+.. _coverage report: ./coverage-report/index.html
 
 Indices and tables
 ==================
