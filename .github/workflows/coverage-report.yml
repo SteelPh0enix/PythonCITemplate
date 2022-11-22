@@ -39,7 +39,10 @@ jobs:
           python -m pip install --upgrade pip
           curl -sSL https://install.python-poetry.org | python3 -
           poetry install
-      - run: poetry run coverage html
+      - name: Generate coverage report
+        run: |
+          poetry run coverage run -m pytest
+          poetry run coverage html
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
