@@ -4,19 +4,24 @@ version = "0.1.0"
 description = "An example app with some tests"
 authors = ["SteelPh0enix <steelphoenix2137@gmail.com>"]
 readme = "README.md"
-packages = [{include = "example_app"}]
+packages = [{ include = "example_app" }]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-sphinx-rtd-theme = "^1.1.1"
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.10.0"
 mypy = "^0.991"
 pytest = "^7.2.0"
 flake8 = "^5.0.4"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
 coverage = "^6.5.0"
 sphinx = "^5.3.0"
+sphinx-rtd-theme = "^1.1.1"
 
 [build-system]
 requires = ["poetry-core"]
