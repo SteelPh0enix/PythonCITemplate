@@ -4,3 +4,7 @@ def do_some_math(first: float, second: float) -> float:
 
 def do_some_different_math(arg: float) -> float:
     return arg**arg
+
+
+def uncovered_function(something: None) -> None:
+    pass
