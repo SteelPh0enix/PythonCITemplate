@@ -42,7 +42,7 @@ jobs:
       - name: Generate coverage report
         run: |
           poetry run coverage run -m pytest
-          poetry run coverage html
+          poetry run coverage html -d coverage_report
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
