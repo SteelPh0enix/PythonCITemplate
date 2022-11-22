@@ -129,4 +129,5 @@ dmypy.json
 .pyre/
 
 /.vscode
-/coverage_report
+/coverage-report
+/site-content
